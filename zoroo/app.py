@@ -17,11 +17,10 @@ REGION = os.environ.get("AWS_REGION", "ap-south-1")
 dynamodb = boto3.resource('dynamodb', region_name=REGION)
 sns = boto3.client('sns', region_name=REGION)
 
-users_table = dynamodb.Table('travel-Usersss')
-bookings_table = dynamodb.Table('bookingsss')
+users_table = dynamodb.Table('travel-use')
+bookings_table = dynamodb.Table('booking')
 
-SNS_TOPIC_ARN = "arn:aws:sns:ap-south-1:336449003024:Travelgoooo"
-
+SNS_TOPIC_ARN = "arn:aws:sns:ap-south-1:336449003024:travelgotopic"
 # ---------------- STATIC DATA ----------------
 bus_data = [
     {"id": "B1", "name": "Super Luxury Bus", "source": "Hyderabad", "dest": "Bangalore", "price": 800},
